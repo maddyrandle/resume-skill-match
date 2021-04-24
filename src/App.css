@@ -1,11 +1,12 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+  grid-template-areas:
+  "header"
+  "body";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,19 +15,42 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  grid-area: header;
+  background-color: lightgrey;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(22px + 2vmin);
-  color: white;
+  color: #282c34;
   text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+.App-body {
+  grid-area: body;
+  background-color: #282c34;
+  height: 50rem;
+  color: #fff;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  "mySkills requiredSkills";
+  padding: 8rem;
+
+}
+
+.my-skills,
+.required-skills {
+  border: 2px solid red;
+}
+
+.my-skills {
+
+  grid-area: mySkills;
+}
+
+.required-skills {
+
+  grid-area: requiredSkills;
 }
 
 @keyframes App-logo-spin {

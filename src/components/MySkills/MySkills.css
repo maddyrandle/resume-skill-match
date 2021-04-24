@@ -1,0 +1,32 @@
+.my-skills-main {
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-areas:
+    "title"
+    "newSkill"
+    "allSkills";
+  height: 100%;
+  
+}
+
+.my-skills-title {
+  color: #fff;
+  grid-area: title;
+}
+
+.new-skill {
+  grid-area: newSkill;
+}
+
+.new-skill-input {
+
+}
+
+.new-skill-button {
+
+}
+
+.my-skills-body {
+  grid-area: allSkills;
+}
